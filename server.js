@@ -2,7 +2,7 @@
 const  express = require('express');
 const path = require('path');
 const rootDir = require('./util/path');
-const adminRoutes = require('./routes/admin');
+const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //this is how we use routes, as middleware.
 //has to be at top of the structure
-app.use("/admin",adminRoutes);
+app.use("/admin",adminData.routes);
 app.use(shopRoutes);
 
 
