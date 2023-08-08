@@ -8,6 +8,8 @@ const shopRoutes = require('./routes/shop');
 
 
 const app = express();
+app.set('view engine', 'pug');
+app.set('views','views')
 
 //body parser can also use with express.json
 app.use(express.urlencoded({extended: true}));
