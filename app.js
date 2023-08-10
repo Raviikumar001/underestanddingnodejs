@@ -18,5 +18,5 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use(errorRoute.productsError);
-
+  
 app.listen(3000);
